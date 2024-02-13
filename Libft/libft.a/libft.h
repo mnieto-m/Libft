@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/02/13 18:58:21 by mnieto-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -23,5 +35,6 @@ char	*ft_strnstr(const char *src, const char *search, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif
