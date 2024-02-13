@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:27:16 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/12 23:11:47 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:44:56 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *src, const char *search, size_t len)
 {
-  	size_t	i;
-  	size_t	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (search[i] == '\0')
@@ -23,10 +23,10 @@ char	*ft_strnstr(const char *src, const char *search, size_t len)
 	while (src[i] != '\0')
 	{
 		j = 0;
-		while (search[j] != '\0' && (src[i + j] == search[j]) && (i + j < len)) 
+		while (search[j] != '\0' && (src[i + j] == search[j]) && (i + j < len))
 		{
 			j++;
-			if((search[j] == '\0')) 
+			if ((search[j] == '\0'))
 			{
 				return ((char *)&src[i]);
 			}
@@ -38,8 +38,8 @@ char	*ft_strnstr(const char *src, const char *search, size_t len)
 
 /*int main(void)
 {
-char *src = "MZIRIBMZIRIBMZE123";
-char *search = "MZIRIBMZE";
-size_t len = 9;
+char	*src = "MZIRIBMZIRIBMZE123";
+char	*search = "MZIRIBMZE";
+size_t	len = 9;
 printf("%s", ft_strnstr(src, search, len));
 }*/

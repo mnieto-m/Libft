@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:58:07 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/13 17:25:32 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:44:21 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	{
 		i++;
 	}
-	if(i < dstsize)
+	if (i < dstsize)
 	{
 		while (src[j] != '\0' && (i + j < dstsize - 1))
 		{
@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (i + ft_strlen(src));
 }
 
-/*int	main ()
+/*int	main (void)
 {
 	char dst[50] = "eres un pesado" ;
 	char src[100] = ", bueno ya no ";
