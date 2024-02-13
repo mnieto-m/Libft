@@ -19,7 +19,6 @@ ft_memcmp.c\
 ft_memset.c\
 ft_memcpy.c\
 ft_strrchr.c\
-ft_calloc.c\
 ft_memmove.c
 OBJ	=	$(SRC:.c=.o)
 CC	 =	gcc
