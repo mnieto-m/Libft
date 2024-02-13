@@ -3,20 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnieto-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:33 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/01 19:39:35 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/13 23:14:01 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove (void *dst, const void *src, size_t len)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i; 
-	unsigned char	str1;
- 	unsigned const char	str2;
+	size_t				i;
+	unsigned char		*str1;
+	unsigned const char	*str2;
 
-	
-
-	return(dst);
+	i = 0;
+	if ((unsigned char *)dst == '\0' || (unsigned char *)src == '\0')
+		return (dst);
+	if (src > dst)
+	{
+		while (len > 0)
+		{
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+			len--;
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
+	}
+	return (dst);
 }
