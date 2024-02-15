@@ -12,5 +12,8 @@
 
 int	atoi(const char *str)
 {
-	
+	int i;
+
+	 i = 0;
+	 
 }
