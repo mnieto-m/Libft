@@ -6,11 +6,18 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:56 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/14 18:00:09 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/16 15:25:08 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
      char *ft_strdup(const char *s1)
 	 {
-		
+		char *s2;
+		int i;
+		int j;
+
+		i = strlen(s1);
+		j = 0;
 	 }
