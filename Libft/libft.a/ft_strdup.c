@@ -6,18 +6,23 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:56 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/16 15:25:08 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/16 17:44:01 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-     char *ft_strdup(const char *s1)
-	 {
-		char *s2;
-		int i;
-		int j;
+char	*ft_strdup(const char *s1)
+{
+	char	*dst;
+	size_t	i;
 
-		i = strlen(s1);
-		j = 0;
-	 }
+	i = ft_strlen(s1) + 1;
+	dst = (char *)malloc(i);
+	if (dst == 0)
+	{
+		return (0);
+	}
+	ft_memcpy(dst, s1, i);
+	return (dst);
+}
