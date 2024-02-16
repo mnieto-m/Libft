@@ -20,7 +20,8 @@ ft_memset.c\
 ft_memcpy.c\
 ft_strrchr.c\
 ft_memmove.c\
-ft_calloc.c
+ft_calloc.c\
+ft_strdup.c 
 OBJ	=	$(SRC:.c=.o)
 CC	 =	gcc
 FLAGS	=	-Wall -Werror -Wextra
