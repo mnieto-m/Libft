@@ -22,6 +22,7 @@ ft_strrchr.c\
 ft_memmove.c\
 ft_calloc.c\
 ft_strdup.c\
+ft_substr.c\
 
 OBJ	=	$(SRC:.c=.o)
 CC	 =	gcc
