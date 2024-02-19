@@ -17,14 +17,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char *dst;
 	size_t i;
 
-	while (i == (start + i))
+	while (i< len)
 	{
-		if (i == len)
-		{
-			dst[i] = '\0';
-			return (dst);
-		}
-		dst[i] =  s[i + i];
+		dst[i] =  s[i + start];
 		i++;
 	}
+	dst[i] = '\0';
+	return (dst);
 }
