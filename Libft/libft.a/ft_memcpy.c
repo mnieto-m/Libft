@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:25 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/13 18:44:10 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/20 17:32:36 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (dst == '\0' && src == '\0')
+	if (!dst && !src)
 	{
 		return (dst);
 	}
