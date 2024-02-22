@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 16:42:55 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/22 18:03:00 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/02/22 17:41:50 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/02/22 19:47:34 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	n;
-	char	*str;
+	char *dst;
+	size_t i;
+	size_t j;
+	size_t k;
 
-	if (!s1 || !s2)
+	i = 0;
+	j = ft_strlen(s1);
+	while (i < j && ft_strchr(set, s1[i]))
+		i++;
+	while (j > i && ft_strchr(set, s1[j - 1]))
+		j--;
+	k = j - i;
+	dst = (char *)malloc(k + 1);
+	if (!dst)
 		return (NULL);
-	n = ft_strlen(s1) + ft_strlen(s2);
-	str = (char *)(malloc(n + 1));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s1, n + 1);
-	ft_strlcat(str, s2, n + 1);
-	return(str);
+	ft_substr(s1, i, k);
+	dst[k] = '\0';
 }

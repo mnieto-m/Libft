@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 19:00:24 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/20 17:18:58 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:27:40 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		s_len = 0;
 	else
 		s_len = ft_strlen(s) - start;
-	dst = (char *) malloc(s_len + 1);
+	dst = (char *)malloc(s_len + 1);
 	if (!(dst))
 		return (0);
 	while (i < s_len)
@@ -37,5 +37,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	dst[i] = '\0';
 	return (dst);
-} 
-
+}
