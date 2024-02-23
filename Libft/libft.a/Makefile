@@ -21,6 +21,7 @@ ft_memcpy.c\
 ft_strrchr.c\
 ft_memmove.c\
 ft_calloc.c\
+ft_atoi.c\
 ft_strdup.c\
 ft_substr.c\
 ft_strjoin.c\
