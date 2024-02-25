@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 19:57:54 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/25 21:16:07 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/02/25 19:58:06 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/02/25 22:21:42 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
+void ft_putchar_fd(char c, int fd)
 {
-	int	i;
-
-	i = 0;
-	if (dstsize > 0)
-	{
-		while (src[i] != '\0' && (i < dstsize - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (ft_strlen(src));
+	write(fd, &c, 1);
 }
-
-/* #include <stdio.h>
-int	main(void)
-{
-	char src[100] = "eloi mort 200";
-	char [100];
-	ft_strlcpy( ,src);
-	printf("%s", );
-	return(0);
-} */
