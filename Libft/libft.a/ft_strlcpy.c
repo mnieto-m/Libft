@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:57:54 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/25 21:16:07 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/26 00:25:20 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,3 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-
-/* #include <stdio.h>
-int	main(void)
-{
-	char src[100] = "eloi mort 200";
-	char [100];
-	ft_strlcpy( ,src);
-	printf("%s", );
-	return(0);
-} */

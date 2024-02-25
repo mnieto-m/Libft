@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:25 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/20 17:32:36 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/26 00:35:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*int main()
-{
-char	src[] = "kasjflaksdjfkljasf";
-char dst[89] ;
-size_t	n = 90;
-printf("%s", ft_memcpy(dst, src, n));
-}*/

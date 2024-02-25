@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:48 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/13 18:49:52 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/26 00:18:29 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-
-/*int main ()
-{
-	char s[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	int c = '\0';
-	printf("%s", ft_strchr(s, c));
-}*/

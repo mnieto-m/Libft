@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 11:27:34 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/23 15:06:46 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:30:33 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	long long int	dest;
-	int				sign;
+	int	dest;
+	int	sign;
 
 	dest = 0;
 	sign = 1;

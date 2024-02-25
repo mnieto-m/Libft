@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 12:52:54 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/23 18:15:42 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/02/25 22:31:08 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/02/25 23:58:21 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static ft_len(int *aux, int *len)
-{	
 
-	while (*aux / 10 != '\0')
-	{
-		len++;
-		aux = *aux /10;
-	}
-	while ()
-	{
-		/* code */
-	}
-	
-}
-char *ft_itoa(int n)
+void ft_putnbr_fd(int n, int fd)
 {
-	int		sign;
-	int		len;
-	int		aux;s
-	char	*str;
-	
-	aux = n;
-	len = 0;
-	str = (char *)malloc(len + 1);
-	if (!str)
-		return (0);
-	
-}	
+	int aux;
+
+	aux = 0;
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+	}
+	else
+	{
+		if (n < 0)
+		{
+			write(1, "-", 1);
+			n = n * -1;
+		}
+		if (n > 9)
+		{
+			ft_putnbr(n / 10);
+			n = n % 10;
+		}
+		if (n < 10)
+			ft_putchar_fd(n + '0');
+	}
+	ft_putchar_fd(n, fd);
+}

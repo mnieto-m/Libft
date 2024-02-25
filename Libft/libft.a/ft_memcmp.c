@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:37:08 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/13 18:43:33 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:03:47 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*int main ()
-{
-	char s1[89]= "Al";
-	char s2[89]= "J";
-	size_t n = 20;
-	printf("%d",ft_memcmp(s1, s2, n));
-}*/
