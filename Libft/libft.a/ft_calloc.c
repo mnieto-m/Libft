@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:36:44 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/25 23:31:43 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/26 20:31:27 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	a = (char *)malloc(count * size);
 	if (size != 0 && count > SIZE_MAX / size)
 		return (0);
-	if (a == 0)
+	if (!a)
 		return (0);
 	ft_bzero(a, count * size);
 	return (a);
