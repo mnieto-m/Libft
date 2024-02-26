@@ -29,6 +29,7 @@ ft_strtrim.c\
 ft_putchar_fd.c\
 ft_putendl_fd.c\
 ft_putstr_fd.c\
+ft_putnbr_fd.c
 
 OBJ	=	$(SRC:.c=.o)
 CC	 =	gcc
