@@ -35,7 +35,7 @@ ft_striteri.c\
 ft_itoa.c\
 
 OBJ	= $(SRC:.c=.o)
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 ${NAME}: ${OBJ}

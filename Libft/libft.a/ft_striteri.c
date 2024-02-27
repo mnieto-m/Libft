@@ -6,20 +6,20 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 19:26:09 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/26 21:20:44 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 19:58:06 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s && s[i] != '\0')
 	{
-		f(i, s++);
+		f(i, &s[i]);
 		i++;
 	}
 }

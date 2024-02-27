@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:58:07 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/27 15:15:59 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 19:58:15 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (i + ft_strlen(src));
 }
-
