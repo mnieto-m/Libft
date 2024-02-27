@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:27:16 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/13 18:44:56 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 15:15:46 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_strnstr(const char *src, const char *search, size_t len)
 	return (0);
 }
 
-/*int main(void)
-{
-char	*src = "MZIRIBMZIRIBMZE123";
-char	*search = "MZIRIBMZE";
-size_t	len = 9;
-printf("%s", ft_strnstr(src, search, len));
-}*/

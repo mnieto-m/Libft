@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:40:07 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/13 18:45:05 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 15:15:51 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-/*int main ()
-{
-	char s[] = "pablblo";
-	int c = 'b';
-	printf("%s", strrchr(s, c));
-}*/

@@ -6,34 +6,62 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:52:54 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/25 23:38:44 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 16:32:37 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	ft_len(int *aux, int *len)
+static int	ft_len(int n)
 {
-	while (*aux / 10 != '\0')
+	int	i;
+
+	i = 0;
+	if(n < 0)
 	{
-		len++;
-		aux = *aux / 10;
+		i++;
 	}
-	while ()
+	if(n == 0)
+		return(1);
+	while (n)
 	{
-		/* code */
+		n /= 10;
+		i++;
 	}
+	return (i);
 }
 char	*ft_itoa(int n)
 {
-	int		sign;
 	int		len;
-	int		aux;
 	char	*str;
 
-	aux = n;
-	len = 0;
-	str = (char *)malloc(len + 1);
+	if (n == -2147483648)
+		str = ft_strdup("-2147483648");
+	else
+	{
+	len = ft_len(n);
+	str = (char *)ft_calloc((len + 1), 1);
 	if (!str)
 		return (0);
+	if (n < 0)
+		{
+			str[0] = '-';
+			n *= -1;
+		}
+		while(n > 9)
+		{
+			str[(len--) - 1] = (n % 10) + 48;
+			n = n / 10;
+		}
+		if (n < 10)
+			str[len - 1] = n + 48;
+	}
+	return(str);
 }
+/* int main(void)
+{
+	int c;
+
+	c = 198341304;
+	printf("%s",ft_itoa(c));
+} */

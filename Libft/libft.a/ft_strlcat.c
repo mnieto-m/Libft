@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:58:07 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/20 17:23:37 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 15:15:59 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (i + ft_strlen(src));
 }
 
-/*int	main (void)
-{
-	char dst[50] = "eres un pesado" ;
-	char src[100] = ", bueno ya no ";
-	size_t dstsize = 50;
-	printf("%zu",ft_strlcat(src, dst, dstsize));
-}*/

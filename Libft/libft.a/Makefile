@@ -31,12 +31,13 @@ ft_putendl_fd.c\
 ft_putstr_fd.c\
 ft_putnbr_fd.c\
 ft_strmapi.c\
-ft_striteri.c
+ft_striteri.c\
+ft_itoa.c\
 
-OBJ	=	$(SRC:.c=.o)
-CC	 =	gcc
-FLAGS	=	-Wall -Werror -Wextra
-NAME    =	libft.a
+OBJ	= $(SRC:.c=.o)
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+NAME = libft.a
 ${NAME}: ${OBJ}
 	@ar r ${NAME} ${OBJ}
 all: ${NAME}

@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:41:50 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/26 00:24:30 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/27 16:50:36 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		final = size - i;
 		dst = (char *)malloc(final + 1);
 		if (!dst)
-			return ('\0');
-		ft_strlcpy(dst, s1 + i, final + 1);
+			return (0);
+		ft_strlcpy(dst, ((char*)s1) + i, final + 1);
 	}
 	return (dst);
 }
