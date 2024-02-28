@@ -6,11 +6,15 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 20:10:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/27 14:19:28 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:44:02 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+static int ft_len()
+{}
 char **ft_split(char const *s, char c)
 {
-	
+
 }
