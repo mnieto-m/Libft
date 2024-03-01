@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 20:10:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/01 04:34:33 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/03/01 21:06:33 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static int	ft_nword(char const *s, char c)
 	int	nword;
 
 	i = 0;
+	nword = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
@@ -43,28 +44,36 @@ static int	ft_nword(char const *s, char c)
 	}
 	return (nword);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	int		nword;
+	int		j;
 	int		i;
 	char	**tab;
 
+	j = 0;
 	i = 0;
+	nword = 0;
 	nword = ft_nword(s, c);
 	tab = (char **)ft_calloc((nword + 1), sizeof(char *));
-	if(!tab)
-		return (0);
+	if (!tab)
+		return (NULL);
+	while (0 < nword)
+	{
+		while (s[i] == c)
+			i++;
+		tab[j] = malloc(ft_lword(&s[i], c));
+		nword++;
+	}
+	return(tab);
 }
-/*int	main(void)
+
+int	main(void)
 {
 	char *s = "_____hola_que_tal_estas";
 	char c = '_';
 	char **tab;
-	printf("%d\n", ft_len(0, s, c));
 	tab = ft_split(s, c);
-	printf("%s\n", tab[0]);
-	printf("%s\n", tab[1]);
-	printf("%s\n", tab[2]);
-	printf("%s\n", tab[3]);
 	return (0);
-}*/
+}
