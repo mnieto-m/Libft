@@ -6,44 +6,54 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 20:10:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/01 02:23:19 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/03/01 04:34:33 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len(int j, char const *s, char c)
+static int	ft_lword(char const *s, char c)
 {
-	while (s[j] != '\0')
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
 	{
-		while (s[j] != c)
-		{
-			if (s[j] == '\0' || s[j] == c)
-			{
-				return (word);
-			}
-			j++;
-		}
-		j++;
+		i++;
 	}
-	return (0);
+	return (i);
+}
+
+static int	ft_nword(char const *s, char c)
+{
+	int	i;
+	int	nword;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			nword++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+		}
+		else
+			i++;
+	}
+	return (nword);
 }
 char	**ft_split(char const *s, char c)
 {
-	int	word;
-	int	j;
+	int		nword;
+	int		i;
+	char	**tab;
 
-	j = 0;
-	word = 0;
-	while (s[j] != '\0')
-	{
-		j += ft_len(j, s, c);
-		printf("j: %d\n", j);
-		word++;
-	}
-	printf("%d\n", word);
-	return (0);
-	//Cada vez que me devuelva j tengo que sumar word y reservar memoria para word.
+	i = 0;
+	nword = ft_nword(s, c);
+	tab = (char **)ft_calloc((nword + 1), sizeof(char *));
+	if(!tab)
+		return (0);
 }
 /*int	main(void)
 {
