@@ -33,6 +33,7 @@ ft_putnbr_fd.c\
 ft_strmapi.c\
 ft_striteri.c\
 ft_itoa.c\
+ft_split.c\
 
 OBJ	= $(SRC:.c=.o)
 CC = cc

@@ -6,74 +6,67 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 20:10:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/01 21:06:33 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/03/02 23:59:59 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_lword(char const *s, char c)
+static int	ft_numbword(char const *s, char c)
 {
 	int	i;
+	int	numbword;
 
 	i = 0;
-	while (s[i] != c && s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-static int	ft_nword(char const *s, char c)
-{
-	int	i;
-	int	nword;
-
-	i = 0;
-	nword = 0;
+	numbword = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
 		{
-			nword++;
+			numbword++;
 			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
 		else
 			i++;
 	}
-	return (nword);
+	return (numbword);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		nword;
-	int		j;
+	int		numbword;
+	int		lword;
 	int		i;
 	char	**tab;
 
-	j = 0;
 	i = 0;
-	nword = 0;
-	nword = ft_nword(s, c);
-	tab = (char **)ft_calloc((nword + 1), sizeof(char *));
-	if (!tab)
+	numbword = ft_numbword(s, c);
+	tab = (char **)ft_calloc((numbword + 1), sizeof(char *));
+	if (!tab || !s)
 		return (NULL);
-	while (0 < nword)
+	while (*s)
 	{
-		while (s[i] == c)
-			i++;
-		tab[j] = malloc(ft_lword(&s[i], c));
-		nword++;
+		while (*s == c && *s)
+			s++;
+		if (*s)
+		{
+			if (!ft_strchr(s, c))
+				lword = ft_strlen(s);
+			else
+				lword = ft_strchr(s, c) - s;
+			tab[i++] = ft_substr(s, 0, lword);
+			s += lword;
+		}
 	}
-	return(tab);
+	return (tab);
 }
 
-int	main(void)
+int	main(void) 
 {
 	char *s = "_____hola_que_tal_estas";
 	char c = '_';
 	char **tab;
 	tab = ft_split(s, c);
 	return (0);
-}
+} 
