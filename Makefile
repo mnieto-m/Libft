@@ -48,13 +48,13 @@ NAME = libft.a
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	AR R ${NAME} ${OBJ}
+	$(AR) $(R) ${NAME} ${OBJ}
 
 clean:
-	RM RMFLAGS ${OBJ}
+	$(RM) $(RMFLAGS) ${OBJ}
 
 fclean: clean 
-	RM RMFLAGS ${NAME}
+	$(RM) $(RMFLAGS) ${NAME}
 
 re: fclean all
 
