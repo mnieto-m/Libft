@@ -36,16 +36,24 @@ ft_itoa.c\
 ft_split.c\
 
 OBJ	= $(SRC:.c=.o)
-CC = cc
+CC = gcc
+RM = rm 
+RMFLAGS = -f
 CFLAGS = -Wall -Werror -Wextra
+
 NAME = libft.a
-${NAME}: ${OBJ}
-	@ar r ${NAME} ${OBJ}
+
 all: ${NAME}
+
+${NAME}: ${OBJ}
+	ar r ${NAME} ${OBJ}
+
 clean:
-	@rm -f ${OBJ}
+	rm -f ${OBJ}
+
 fclean: clean 
-	@rm -f ${NAME}
+	rm -f ${NAME}
+
 re: fclean all
-.PHONY:
-	all clean fclean re
+
+.PHONY: all clean fclean re

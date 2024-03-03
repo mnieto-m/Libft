@@ -6,11 +6,21 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 20:10:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/02 23:59:59 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/03/03 18:59:15 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_dfree(char **tab, int i)
+{
+	while (i)
+	{
+		free(tab[i - 1]);
+		i--;
+	}
+	free(tab);
+}
 
 static int	ft_numbword(char const *s, char c)
 {
@@ -35,14 +45,12 @@ static int	ft_numbword(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		numbword;
 	int		lword;
 	int		i;
 	char	**tab;
 
-	i = 0;
-	numbword = ft_numbword(s, c);
-	tab = (char **)ft_calloc((numbword + 1), sizeof(char *));
+	i = -1;
+	tab = (char **)ft_calloc((ft_numbword(s, c) + 1), sizeof(char *));
 	if (!tab || !s)
 		return (NULL);
 	while (*s)
@@ -55,18 +63,20 @@ char	**ft_split(char const *s, char c)
 				lword = ft_strlen(s);
 			else
 				lword = ft_strchr(s, c) - s;
-			tab[i++] = ft_substr(s, 0, lword);
+			tab[++i] = ft_substr(s, 0, lword);
+			if (!tab[i])
+				return (ft_dfree(tab, i), NULL);
 			s += lword;
 		}
 	}
 	return (tab);
 }
 
-int	main(void) 
+/*   int	main(void) 
 {
-	char *s = "_____hola_que_tal_estas";
-	char c = '_';
+	char *s = "xxxxxxxxhello!";
+	char c = ' ';
 	char **tab;
 	tab = ft_split(s, c);
 	return (0);
-} 
+} */
