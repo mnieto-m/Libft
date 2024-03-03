@@ -40,19 +40,21 @@ CC = gcc
 RM = rm 
 RMFLAGS = -f
 CFLAGS = -Wall -Werror -Wextra
+AR = ar
+R = r
 
 NAME = libft.a
 
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	ar r ${NAME} ${OBJ}
+	AR R ${NAME} ${OBJ}
 
 clean:
-	rm -f ${OBJ}
+	RM RMFLAGS ${OBJ}
 
 fclean: clean 
-	rm -f ${NAME}
+	RM RMFLAGS ${NAME}
 
 re: fclean all
 
