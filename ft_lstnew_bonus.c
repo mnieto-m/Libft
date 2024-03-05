@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 23:37:34 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/05 16:12:53 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/03/05 21:09:01 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *lst;
+	t_list	*lst;
+
 	lst = malloc(sizeof(t_list));
 	if (!lst)
 		return (NULL);

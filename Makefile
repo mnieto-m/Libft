@@ -49,14 +49,12 @@ R = r
 NAME = libft.a
 
 all: ${NAME}
-all: ${NAME_BONUS}
-bonus: ${OBJ_BONUS} 
 
 ${NAME}: ${OBJ}
 	$(AR) $(R) ${NAME} ${OBJ}
 
-${NAME_BONUS}: ${OBJ_BONUS}
-	$(AR) $(R) ${NAME_BONUS} ${OBJ_BONUS}
+bonus: ${OBJ_BONUS}
+	$(AR) $(R) ${NAME} ${OBJ_BONUS}
 
 clean:
 	$(RM) $(RMFLAGS) ${OBJ}
