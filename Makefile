@@ -36,6 +36,10 @@ ft_split.c\
 ft_isalnum.c\
 
 SRC_BONUS	= ft_lstnew_bonus.c\
+ft_lstadd_front_bonus.c\
+ft_lstsize_bonus.c\
+ft_lstlast_bonus.c\
+ft_lstadd_back_bonus.c\
 
 OBJ	= $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
@@ -61,10 +65,15 @@ clean:
 	$(RM) $(RMFLAGS) ${OBJ_BONUS}
 
 fclean: clean 
-	$(RM) $(RMFLAGS) ${NAME}
+	$(RM) $(RMFLAGS) $(NAME)
+	$(RM) $(RMFLAGS) ${OBJ_BONUS}
+
+clean_bonus: clean
+	$(RM) $(RMFLAGS) ${OBJ_BONUS}
+	
+fclean_bonus: fclean
 	$(RM) $(RMFLAGS) ${OBJ_BONUS}
 
 re: fclean all
-re: fclean bonus
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re
