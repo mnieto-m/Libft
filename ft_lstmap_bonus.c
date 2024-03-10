@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 19:39:48 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/10 18:15:34 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/03/10 20:17:43 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/03/10 20:45:17 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned int	i;
+	t_list	*final;
+	t_list	*aux;
+	void	*fcontent;
 
-	i = 0;
-	while (s[i])
+	final = NULL;
+	while (lst)
 	{
-		if (s[i] == (char)c)
+		fcontent = f(lst->content);
+		aux = ft_lstnew(fcontent);
+		if (!aux)
 		{
-			return ((char *)&s[i]);
+			del(fcontent);
+			ft_lstclear(&aux, del);
 		}
-		i++;
+		ft_lstadd_back(&final, aux);
+		lst = lst->next;
 	}
-	if ((char)c == 0)
-		return ((char *)&s[i]);
-	return (NULL);
+	return (final);
 }

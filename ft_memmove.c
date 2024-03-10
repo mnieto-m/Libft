@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:39:33 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/02/16 15:06:13 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/03/10 17:36:47 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
+	char	*strdst;
+	char	*strsrc;
 
+	strdst = (char *)dst;
+	strsrc = (char *)src;
 	i = 0;
 	if (!dst && !src && len)
 		return (0);
@@ -27,7 +31,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len > 0)
 		{
-			((char *)dst)[len - 1] = ((char *)src)[len - 1];
+			(strdst)[len - 1] = (strsrc)[len - 1];
 			len--;
 		}
 	}
