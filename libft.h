@@ -6,13 +6,14 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/03/10 20:27:41 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/04/11 00:48:44 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdint.h>
 # include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
