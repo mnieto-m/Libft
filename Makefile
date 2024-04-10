@@ -34,8 +34,7 @@ ft_striteri.c\
 ft_itoa.c\
 ft_split.c\
 ft_isalnum.c\
-
-SRC_BONUS	= ft_lstnew_bonus.c\
+ft_lstnew_bonus.c\
 ft_lstadd_front_bonus.c\
 ft_lstsize_bonus.c\
 ft_lstlast_bonus.c\
@@ -46,7 +45,6 @@ ft_lstiter_bonus.c\
 ft_lstmap_bonus.c\
 
 OBJ	= $(SRC:.c=.o)
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
 CC = gcc
 RM = rm 
 RMFLAGS = -f
@@ -61,22 +59,11 @@ all: ${NAME}
 ${NAME}: ${OBJ}
 	$(AR) $(R) ${NAME} ${OBJ}
 
-bonus: ${OBJ_BONUS}
-	$(AR) $(R) ${NAME} ${OBJ_BONUS}
-
 clean:
 	$(RM) $(RMFLAGS) ${OBJ}
-	$(RM) $(RMFLAGS) ${OBJ_BONUS}
 
 fclean: clean 
 	$(RM) $(RMFLAGS) $(NAME)
-	$(RM) $(RMFLAGS) ${OBJ_BONUS}
-
-clean_bonus: clean
-	$(RM) $(RMFLAGS) ${OBJ_BONUS}
-	
-fclean_bonus: fclean
-	$(RM) $(RMFLAGS) ${OBJ_BONUS}
 
 re: fclean all
 
