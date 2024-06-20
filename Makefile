@@ -43,6 +43,9 @@ ft_lstdelone.c\
 ft_lstclear.c\
 ft_lstiter.c\
 ft_lstmap.c\
+ft_putchar_pf.c\
+ft_putstr_pf.c\
+ft_putnbr_pf.c
 
 OBJ	= $(SRC:.c=.o)
 CC = gcc

@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 19:58:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/06/18 18:18:06 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/06/19 20:07:44 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/06/19 20:14:29 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr_base(int nbr, char *base, int count)
 {
-	write(fd, &c, 1);
+	
 }

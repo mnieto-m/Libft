@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 19:58:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/06/18 18:18:06 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/06/18 22:01:07 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_pf(char c, int *count)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
+	(*count)++;
 }
