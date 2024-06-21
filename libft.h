@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/06/21 13:32:59 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/06/21 20:43:21 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void	ft_putchar_pf(char c, int *count);
 void	ft_putstr_pf(char *s, int *count);
-void	ft_putunbr_base(unsigned int n, char *base, int *count);
+void	ft_putunbr_base(size_t n, char *base, int *count);
+void	ft_pointer_pf(void *flag,int *count);
 
 #endif
