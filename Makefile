@@ -45,7 +45,7 @@ ft_lstiter.c\
 ft_lstmap.c\
 ft_putchar_pf.c\
 ft_putstr_pf.c\
-ft_putnbr_pf.c
+ft_putunbr_base.c
 
 OBJ	= $(SRC:.c=.o)
 CC = gcc
