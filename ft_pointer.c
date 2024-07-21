@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr_base.c                                  :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 20:07:44 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/21 19:23:25 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/06/21 13:44:32 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/07/21 19:29:40 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putunbr_base(size_t n, char *base)
+int ft_pointer(void *flag)
 {
-	size_t len;
-	size_t	count;
+	size_t count;
 	count = 0;
-	len = ft_strlen(base);
-		if (n > (len - 1))
-		{
-			count += ft_putunbr_base((n / len), base);
-			n = n % len;
-		}
-		if (n < len)
-			count += ft_putchar(base[n]);
-	return(count);
+	if(flag == NULL)
+		count += (write(1,"(nil)", 5));
+
+	else
+	{
+		count += (write(1,"0x",2));
+		count += (ft_putunbr_base((size_t)flag, "0123456789ABCDF"));
+	}
+	return (count);
 }

@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr_base.c                                  :+:      :+:    :+:   */
+/*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 20:07:44 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/21 19:23:25 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/02/25 19:58:06 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/07/02 16:29:37 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_putunbr_base(size_t n, char *base)
+int	ft_putchar_pf(char c)
 {
-	size_t len;
-	size_t	count;
-	count = 0;
-	len = ft_strlen(base);
-		if (n > (len - 1))
-		{
-			count += ft_putunbr_base((n / len), base);
-			n = n % len;
-		}
-		if (n < len)
-			count += ft_putchar(base[n]);
-	return(count);
+	return (write(1, &c, 1));
 }

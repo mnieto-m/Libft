@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pointer_pf.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 13:44:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/06/21 20:41:50 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/02/25 20:33:18 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/07/02 19:16:33 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void ft_pointer_pf(void *flag,int *count)
+size_t	ft_putstr_pf(char *s)
 {
-	if(flag == NULL)
+	size_t	i;
+	size_t	count;
+
+	count = 0;
+	i = 0;
+	if (s == NULL)
+		return (write(1, "(null)", 6));
+	while (s[i])
 	{
-		write(1,"(nil)", 5);
-		(*count) +=5;
+		count += (write(1, &s[i], 1));
+		i++;
 	}
-	else
-	{
-		write(1,"0x",2);
-		(*count) += 2;
-		ft_putunbr_base((size_t)flag, "0123456789ABCDF", count);
-	}
+	return (count);
 }
