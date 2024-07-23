@@ -1,3 +1,14 @@
+NAME = libft.a
+CC = gcc
+RM = rm 
+RMFLAGS = -f
+CFLAGS = -Wall -Werror -Wextra
+AR = ar
+R = r
+#DIRECTORIES#
+SRC_DIR = 
+#INCLUDES#
+
 SRC	=  ft_isalpha.c\
 ft_isascii.c\
 ft_isdigit.c\
@@ -47,20 +58,14 @@ ft_putunbr_base.c\
 ft_pointer.c\
 ft_putchar.c
 
+INCLUDE = libft.h
 OBJ	= $(SRC:.c=.o)
-CC = gcc
-RM = rm 
-RMFLAGS = -f
-CFLAGS = -Wall -Werror -Wextra
-AR = ar
-R = r
 
-NAME = libft.a
 
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	$(AR) $(R) ${NAME} ${OBJ}
+	$(AR) $(R) ${NAME} ${OBJ} ${INCLUDE}
 
 clean:
 	$(RM) $(RMFLAGS) ${OBJ}
