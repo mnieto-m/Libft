@@ -1,71 +1,94 @@
-NAME = libft.a
+NAME = $(BIN_DIR)libft.a
 CC = gcc
 RM = rm 
-RMFLAGS = -f
+RMFLAGS = -rf
 CFLAGS = -Wall -Werror -Wextra
 AR = ar
 R = r
-#DIRECTORIES#
-SRC_DIR = 
-#INCLUDES#
-
-SRC	=  ft_isalpha.c\
-ft_isascii.c\
-ft_isdigit.c\
-ft_isprint.c\
-ft_tolower.c\
-ft_toupper.c\
-ft_strlen.c\
-ft_strncmp.c\
-ft_strlcpy.c\
-ft_strlcat.c\
-ft_bzero.c\
-ft_memchr.c\
-ft_strchr.c\
-ft_strncmp.c\
-ft_strnstr.c\
-ft_memchr.c\
-ft_memcmp.c\
-ft_memset.c\
-ft_memcpy.c\
-ft_strrchr.c\
-ft_memmove.c\
-ft_calloc.c\
-ft_atoi.c\
-ft_strdup.c\
-ft_substr.c\
-ft_strjoin.c\
-ft_strtrim.c\
-ft_putchar_fd.c\
-ft_putendl_fd.c\
-ft_putstr_fd.c\
-ft_putnbr_fd.c\
-ft_strmapi.c\
-ft_striteri.c\
-ft_itoa.c\
-ft_split.c\
-ft_isalnum.c\
-ft_lstnew.c\
-ft_lstadd_front.c\
-ft_lstsize.c\
-ft_lstlast.c\
-ft_lstadd_back.c\
-ft_lstdelone.c\
-ft_lstclear.c\
-ft_lstiter.c\
-ft_lstmap.c\
-ft_putunbr_base.c\
-ft_pointer.c\
-ft_putchar.c
-
 INCLUDE = libft.h
-OBJ	= $(SRC:.c=.o)
+#DIRECTORIES#
+
+BIN_DIR = bin/
+SRC_DIR = src/
+HDR_DIR = includes/
+
+CTYPE_DIR = ctype/
+LIST_DIR = list/
+STDIO_DIR = stdio/
+STDLIB_DIR = stdlib/
+STRING_DIR = string/
+
+#INCLUDES#
+CTYPE_FILES = ft_isascii\
+				ft_isdigit\
+				ft_isprint\
+				ft_tolower\
+				ft_isalnum\
+				ft_isalpha\
+				ft_toupper
+
+LIS_FILES = ft_lstnew\
+				ft_lstadd_front\
+				ft_lstsize\
+				ft_lstlast\
+				ft_lstadd_back\
+				ft_lstdelone\
+				ft_lstclear\
+				ft_lstiter\
+				ft_lstmap
+
+STDIO_FILES = ft_putunbr_base\
+				ft_pointer\
+				ft_putchar_fd\
+				ft_putendl_fd\
+				ft_putstr_fd\
+				ft_putnbr_fd\
+				ft_putchar
+
+STDLIB_FILES = ft_calloc\
+				ft_atoi\
+				ft_itoa
+
+STRING_FILES = ft_strlen\
+				ft_strncmp\
+				ft_strlcpy\
+				ft_strlcat\
+				ft_bzero\
+				ft_memchr\
+				ft_strchr\
+				ft_strncmp\
+				ft_strnstr\
+				ft_memchr\
+				ft_memcmp\
+				ft_memset\
+				ft_memcpy\
+				ft_strrchr\
+				ft_memmove\
+				ft_strdup\
+				ft_substr\
+				ft_strjoin\
+				ft_strtrim\
+				ft_strmapi\
+				ft_striteri\
+				ft_split
+
+FILES = $(addprefix $(CTYPE_DIR), $(CTYPE_FILES))\
+		$(addprefix $(LIST_DIR), $(LIST_FILES))\
+		$(addprefix $(STDIO_DIR), $(STDIO_FILES))\
+		$(addprefix $(STDLIB_DIR), $(STDLIB_FILES))\
+		$(addprefix $(STRING_DIR), $(STRING_FILES))
+
+SRC	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
+OBJ	= $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
 
 
 all: ${NAME}
 
-${NAME}: ${OBJ}
-	$(AR) $(R) ${NAME} ${OBJ} ${INCLUDE}
+${NAME}:${OBJ}
+	$(AR) $(R) ${NAME} ${OBJ}
+
+$(BIN_DIR)%.o:$(SRC_DIR)%.c
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
 	$(RM) $(RMFLAGS) ${OBJ}
