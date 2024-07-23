@@ -27,7 +27,7 @@ CTYPE_FILES = ft_isascii\
 				ft_isalpha\
 				ft_toupper
 
-LIS_FILES = ft_lstnew\
+LIST_FILES = ft_lstnew\
 				ft_lstadd_front\
 				ft_lstsize\
 				ft_lstlast\
@@ -81,8 +81,11 @@ FILES = $(addprefix $(CTYPE_DIR), $(CTYPE_FILES))\
 SRC	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
 OBJ	= $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
 
+MPRINTF = ${MAKE} -C ./Printf
 
-all: ${NAME}
+all:libft printf
+
+libft: ${NAME}
 
 ${NAME}:${OBJ}
 	$(AR) $(R) ${NAME} ${OBJ}
@@ -90,11 +93,16 @@ ${NAME}:${OBJ}
 $(BIN_DIR)%.o:$(SRC_DIR)%.c
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
+printf :
+	$(MPRINTF)
+
 clean:
-	$(RM) $(RMFLAGS) ${OBJ}
+	$(RM) $(RMFLAGS) ${OBJ} 
+	${MPRINTF} clean
 
 fclean: clean 
-	$(RM) $(RMFLAGS) $(NAME)
+	$(RM) $(RMFLAGS) $(NAME) $(printf)
+	${MPRINTF} fclean
 
 re: fclean all
 
