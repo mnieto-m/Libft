@@ -10,7 +10,6 @@ INCLUDE = libft.h
 
 BIN_DIR = bin/
 SRC_DIR = src/
-HDR_DIR = includes/
 
 CTYPE_DIR = ctype/
 LIST_DIR = list/
