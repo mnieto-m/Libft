@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/01 17:32:09 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:53:50 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
+t_list	*ft_lstsecond_last(t_list *a);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));

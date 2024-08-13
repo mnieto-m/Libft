@@ -1,4 +1,4 @@
-NAME = $(BIN_DIR)libft.a
+NAME = $(LIBFT_DIR)libft.a
 CC = gcc
 RM = rm 
 RMFLAGS = -rf
@@ -8,7 +8,7 @@ R = r
 INCLUDE = libft.h
 #DIRECTORIES#
 
-BIN_DIR = bin/
+LIBFT_DIR = libft/
 SRC_DIR = src/
 
 CTYPE_DIR = ctype/
@@ -34,7 +34,8 @@ LIST_FILES = ft_lstnew\
 				ft_lstdelone\
 				ft_lstclear\
 				ft_lstiter\
-				ft_lstmap
+				ft_lstmap\
+				ft_lstsecond_last\
 
 STDIO_FILES = ft_putunbr_base\
 				ft_pointer\
