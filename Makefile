@@ -19,11 +19,14 @@ STRING_DIR = string/
 
 #INCLUDES#
 CTYPE_FILES = ft_isascii\
-				ft_isdigit\
+				ft_isnum\
 				ft_isprint\
-				ft_tolower\
+				ft_isdigit\
+				ft_issing\
+				ft_isspace\
 				ft_isalnum\
 				ft_isalpha\
+				ft_tolower\
 				ft_toupper
 
 LIST_FILES = ft_lstnew\

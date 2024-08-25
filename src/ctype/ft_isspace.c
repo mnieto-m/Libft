@@ -6,13 +6,13 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:29:57 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/25 21:35:11 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/08/25 22:06:01 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int ft_isspace(char c)
+int ft_isspace(int c)
 {
 	if(((c >= 9 && c <= 13) || c == ' '))
 		return(1);
