@@ -22,7 +22,7 @@ CTYPE_FILES = ft_isascii\
 				ft_isnum\
 				ft_isprint\
 				ft_isdigit\
-				ft_issing\
+				ft_issign\
 				ft_isspace\
 				ft_isalnum\
 				ft_isalpha\
@@ -50,6 +50,7 @@ STDIO_FILES = ft_putunbr_base\
 
 STDLIB_FILES = ft_calloc\
 				ft_atoi\
+				ft_atoi_signal\
 				ft_itoa
 
 STRING_FILES = ft_strlen\

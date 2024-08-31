@@ -6,24 +6,21 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 17:53:24 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/12 17:53:25 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/08/29 17:16:15 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../../libft.h"
-
 
 t_list	*ft_lstsecond_last(t_list *a)
 {
 	t_list	*previous;
 
 	previous = NULL;
-	while(a->next != NULL)
+	while (a->next != NULL)
 	{
 		previous = a;
 		a = a->next;
 	}
-
-	return(previous);
+	return (previous);
 }

@@ -6,15 +6,15 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/25 22:04:14 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/08/29 20:50:03 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdint.h>
 # include <limits.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -26,11 +26,12 @@ int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isnum(int c);
 int					ft_isprint(int c);
-int					ft_issing(int c);
+int					ft_issign(int c);
 int					ft_isspace(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
+int					ft_atoi_signal(char *str);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, char *src, size_t dstsize);
@@ -62,13 +63,13 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-/* 	struct s_list	*previus; */
+	/* 	struct s_list	*previus; */
 }					t_list;
 void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
-t_list	*ft_lstsecond_last(t_list *a);
+t_list				*ft_lstsecond_last(t_list *a);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
@@ -76,8 +77,8 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-int		ft_putunbr_base(size_t n, char *base);
-int		ft_pointer(void *flag);
-int		ft_putchar(char c);
+int					ft_putunbr_base(size_t n, char *base);
+int					ft_pointer(void *flag);
+int					ft_putchar(char c);
 
 #endif

@@ -6,15 +6,15 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:49:13 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/25 22:05:53 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/08/29 17:18:37 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int ft_isnum(int c)
+int	ft_isnum(int c)
 {
-	if(c >='0' && c <= '9')
-		return(1);
-	return(0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
