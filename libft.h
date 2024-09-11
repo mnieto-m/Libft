@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/29 20:50:03 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/09/11 17:37:50 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -80,5 +81,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 int					ft_putunbr_base(size_t n, char *base);
 int					ft_pointer(void *flag);
 int					ft_putchar(char c);
+void				ft_mfree(int count, ...);
 
 #endif

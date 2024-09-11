@@ -51,7 +51,8 @@ STDIO_FILES = ft_putunbr_base\
 STDLIB_FILES = ft_calloc\
 				ft_atoi\
 				ft_atoi_signal\
-				ft_itoa
+				ft_itoa\
+				ft_mfree
 
 STRING_FILES = ft_strlen\
 				ft_strncmp\
