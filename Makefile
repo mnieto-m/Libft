@@ -39,6 +39,7 @@ LIST_FILES = ft_lstnew\
 				ft_lstiter\
 				ft_lstmap\
 				ft_lstsecond_last\
+				ft_lstisduplicate\
 
 STDIO_FILES = ft_putunbr_base\
 				ft_pointer\

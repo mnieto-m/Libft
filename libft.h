@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/09/17 20:57:12 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/09/18 17:48:30 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-	/* 	struct s_list	*previus; */
 }					t_list;
 void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstnew(void *content);
@@ -78,6 +77,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int					ft_lstisduplicate(t_list **a);
 int					ft_putunbr_base(size_t n, char *base);
 int					ft_pointer(void *flag);
 int					ft_putchar(char c);
