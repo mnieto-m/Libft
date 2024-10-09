@@ -1,5 +1,5 @@
 NAME = $(LIBFT_DIR)libft.a
-CC = gcc
+CC = cc
 RM = rm 
 RMFLAGS = -rf
 CFLAGS = -Wall -Werror -Wextra -g3

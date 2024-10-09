@@ -7,7 +7,7 @@ SRC	= ft_printf.c\
 	ft_strlen.c
 
 OBJ	= $(SRC:.c=.o)
-CC = gcc
+CC = cc
 RM = rm 
 RMFLAGS = -f
 CFLAGS = -Wall -Werror -Wextra

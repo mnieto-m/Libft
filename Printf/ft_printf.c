@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 16:24:35 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/04 17:15:54 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/09/09 17:05:59 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_printf(const char *flag, ...)
 			count += ft_checker(args, &flag[++i]);
 		else if (flag[i] == '%' && flag[i + 1] == '\0')
 			return (count);
-		else
+		else 
 			count += ft_putchar_pf(flag[i]);
 		i++;
 	}
