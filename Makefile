@@ -8,7 +8,7 @@ R = r
 INCLUDE = libft.h
 #DIRECTORIES#
 
-LIBFT_DIR = libft/
+LIBFT_DIR = bin/
 SRC_DIR = src/
 
 CTYPE_DIR = ctype/
