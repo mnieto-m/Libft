@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/09/18 17:48:30 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:18:11 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 40
+# endif
+
+# define FD_MAX 1024
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -82,5 +88,10 @@ int					ft_putunbr_base(size_t n, char *base);
 int					ft_pointer(void *flag);
 int					ft_putchar(char c);
 void				ft_mfree(int count, ...);
+
+
+
+/* gnl */
+char	*get_next_line(int fd);
 
 #endif

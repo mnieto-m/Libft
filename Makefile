@@ -11,6 +11,7 @@ INCLUDE = libft.h
 LIBFT_DIR = bin/
 SRC_DIR = src/
 
+GNL_DIR = gnl/
 CTYPE_DIR = ctype/
 LIST_DIR = list/
 STDIO_DIR = stdio/
@@ -18,6 +19,8 @@ STDLIB_DIR = stdlib/
 STRING_DIR = string/
 
 #INCLUDES#
+GNL_FILES = get_next_line
+
 CTYPE_FILES = ft_isascii\
 				ft_isnum\
 				ft_isprint\
@@ -78,7 +81,8 @@ STRING_FILES = ft_strlen\
 				ft_striteri\
 				ft_split
 
-FILES = $(addprefix $(CTYPE_DIR), $(CTYPE_FILES))\
+FILES = $(addprefix $(GNL_DIR), $(GNL_FILES))\
+		$(addprefix $(CTYPE_DIR), $(CTYPE_FILES))\
 		$(addprefix $(LIST_DIR), $(LIST_FILES))\
 		$(addprefix $(STDIO_DIR), $(STDIO_FILES))\
 		$(addprefix $(STDLIB_DIR), $(STDLIB_FILES))\
