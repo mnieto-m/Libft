@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:28:39 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/02 19:09:10 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/11 23:38:12 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include "./../libft.h"
 
 int		ft_printf(char const *flag, ...);
 int		ft_putchar_pf(char c);
 size_t	ft_putnbr_pf(int n);
 size_t	ft_pointer_pf(void *flag);
-size_t	ft_putunbr_base(size_t n, char *base);
 size_t	ft_putstr_pf(char *s);
-size_t	ft_strlen(const char *s);
 
 #endif

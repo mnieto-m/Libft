@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:54:45 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/11/01 16:09:55 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:49:05 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (str[fd] = NULL);
-	str[fd] = read_line(str[fd] , fd);
+	str[fd] = read_line(str[fd], fd);
 	if (!str[fd])
 		return (str[fd] = NULL, NULL);
 	else if (!str[fd][0])

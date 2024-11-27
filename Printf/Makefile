@@ -2,9 +2,7 @@ SRC	= ft_printf.c\
 	ft_pointer_pf.c\
 	ft_putchar_pf.c\
 	ft_putnbr_pf.c\
-	ft_putstr_pf.c\
-	ft_putunbr_base.c\
-	ft_strlen.c
+	ft_putstr_pf.c
 
 OBJ	= $(SRC:.c=.o)
 CC = cc

@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:42:55 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/11/01 14:57:50 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:56:56 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
-	if((l1 + l2) == 0)
+	if ((l1 + l2) == 0)
 		return (NULL);
 	str = (malloc(sizeof(char) * (l1 + l2 + 1)));
 	if (!str)

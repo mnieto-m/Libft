@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr_base.c                                  :+:      :+:    :+:   */
+/*   check_token.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 20:07:44 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/02 18:49:28 by mnieto-m         ###   ########.fr       */
+/*   Created: 2024/11/21 16:54:33 by mnieto-m          #+#    #+#             */
+/*   Updated: 2024/11/21 16:57:19 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../libft.h"
 
-size_t	ft_putunbr_base(size_t n, char *base)
+int	check_token(char *s, char c)
 {
-	size_t	count;
-	size_t	len;
+	int	i;
+	int	count;
 
+	i = 0;
 	count = 0;
-	len = ft_strlen(base);
-	if (n >= len)
+	while (s[i] != '\0')
 	{
-		count += ft_putunbr_base((n / len), base);
-		n = n % len;
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+			count++;
+		i++;
 	}
-	if (n < len)
-		count += (ft_putchar_pf(base[n]));
 	return (count);
 }

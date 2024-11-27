@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 11:29:31 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/23 16:28:22 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/11 23:40:45 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ size_t	ft_strlen(const char *s)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

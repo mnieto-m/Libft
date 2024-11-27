@@ -17,9 +17,10 @@ LIST_DIR = list/
 STDIO_DIR = stdio/
 STDLIB_DIR = stdlib/
 STRING_DIR = string/
+OTHER_DIR = others/
 
 #INCLUDES#
-GNL_FILES = get_next_line
+
 
 CTYPE_FILES = ft_isascii\
 				ft_isnum\
@@ -81,14 +82,20 @@ STRING_FILES = ft_strlen\
 				ft_striteri\
 				ft_split
 
+GNL_FILES = get_next_line
+
+OTHER_FILES = check_token
+
 FILES = $(addprefix $(GNL_DIR), $(GNL_FILES))\
 		$(addprefix $(CTYPE_DIR), $(CTYPE_FILES))\
 		$(addprefix $(LIST_DIR), $(LIST_FILES))\
 		$(addprefix $(STDIO_DIR), $(STDIO_FILES))\
 		$(addprefix $(STDLIB_DIR), $(STDLIB_FILES))\
-		$(addprefix $(STRING_DIR), $(STRING_FILES))
+		$(addprefix $(STRING_DIR), $(STRING_FILES))\
+		$(addprefix $(OTHER_DIR), $(OTHER_FILES))
 
 SRC	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
+
 OBJ	= $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
 
 MPRINTF = ${MAKE} -C ./Printf

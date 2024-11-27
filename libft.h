@@ -6,26 +6,28 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/11/01 15:18:11 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:57:30 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <fcntl.h>
 # include <limits.h>
+# include <stdarg.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <stdarg.h>
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 40
-# endif
 
 # define FD_MAX 1024
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -38,7 +40,7 @@ int					ft_isspace(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
-int					ft_atoi_signal(char *str , int *flag);
+int					ft_atoi_signal(char *str, int *flag);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, char *src, size_t dstsize);
@@ -89,9 +91,10 @@ int					ft_pointer(void *flag);
 int					ft_putchar(char c);
 void				ft_mfree(int count, ...);
 
-
-
 /* gnl */
-char	*get_next_line(int fd);
+char				*get_next_line(int fd);
+
+/* others*/
+int	check_token(char *s, char c);
 
 #endif

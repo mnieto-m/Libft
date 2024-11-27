@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 16:24:35 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/09/09 17:05:59 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:56:44 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ static int	ft_checker(va_list args, const char *flag)
 		return (ft_putunbr_base(va_arg(args, unsigned int), "0123456789"));
 	else if (*flag == 'x')
 		return (ft_putunbr_base(va_arg(args, unsigned int),
-				"0123456789abcdef"));
+								"0123456789abcdef"));
 	else if (*flag == 'X')
 		return (ft_putunbr_base(va_arg(args, unsigned int),
-				"0123456789ABCDEF"));
+								"0123456789ABCDEF"));
 	else if (*flag == '%')
 		return (ft_putchar_pf(*flag));
 	return (-1);
@@ -52,7 +52,7 @@ int	ft_printf(const char *flag, ...)
 			count += ft_checker(args, &flag[++i]);
 		else if (flag[i] == '%' && flag[i + 1] == '\0')
 			return (count);
-		else 
+		else
 			count += ft_putchar_pf(flag[i]);
 		i++;
 	}
