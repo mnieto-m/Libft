@@ -6,13 +6,13 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:54:33 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/11/21 16:57:19 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:21:51 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int	check_token(char *s, char c)
+size_t	check_token(char *s, char c)
 {
 	int	i;
 	int	count;

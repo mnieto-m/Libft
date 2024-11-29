@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/11/21 16:57:30 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:21:59 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <errno.h>
 
 # define FD_MAX 1024
 
@@ -95,6 +96,6 @@ void				ft_mfree(int count, ...);
 char				*get_next_line(int fd);
 
 /* others*/
-int	check_token(char *s, char c);
+size_t	check_token(char *s, char c);
 
 #endif
