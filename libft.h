@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/11/29 17:21:59 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:56:38 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,6 @@ void				ft_mfree(int count, ...);
 char				*get_next_line(int fd);
 
 /* others*/
-size_t	check_token(char *s, char c);
+int	check_token(char *s, char c);
 
 #endif
