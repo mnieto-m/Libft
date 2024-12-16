@@ -6,13 +6,14 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/11 16:56:38 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:13:33 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <errno.h>
 # include <fcntl.h>
 # include <limits.h>
 # include <stdarg.h>
@@ -21,14 +22,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <errno.h>
 
 # define FD_MAX 1024
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
 # endif
-
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -96,6 +95,6 @@ void				ft_mfree(int count, ...);
 char				*get_next_line(int fd);
 
 /* others*/
-int	check_token(char *s, char c);
+int					check_token(char *s, char c);
 
 #endif
