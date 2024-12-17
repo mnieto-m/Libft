@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 16:24:35 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/16 17:14:34 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/17 07:31:44 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../libft.h"
 
 static int	ft_checker(va_list args, const char *flag)
 {

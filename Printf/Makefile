@@ -1,9 +1,4 @@
-SRC	= ft_printf.c\
-	ft_pointer_pf.c\
-	ft_putchar_pf.c\
-	ft_putnbr_pf.c\
-	ft_putstr_pf.c
-
+SRC	= 
 OBJ	= $(SRC:.c=.o)
 CC = cc
 RM = rm 

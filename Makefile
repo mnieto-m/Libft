@@ -18,6 +18,7 @@ STDIO_DIR = stdio/
 STDLIB_DIR = stdlib/
 STRING_DIR = string/
 OTHER_DIR = others/
+PRINTF_DIR = printf/
 
 #INCLUDES#
 
@@ -84,6 +85,13 @@ STRING_FILES = ft_strlen\
 
 GNL_FILES = get_next_line
 
+PRINTF_FILES = ft_printf\
+				ft_pointer_pf\
+				ft_putchar_pf\
+				ft_putnbr_pf\
+				ft_putstr_pf
+
+
 OTHER_FILES = check_token
 
 FILES = $(addprefix $(GNL_DIR), $(GNL_FILES))\
@@ -92,15 +100,14 @@ FILES = $(addprefix $(GNL_DIR), $(GNL_FILES))\
 		$(addprefix $(STDIO_DIR), $(STDIO_FILES))\
 		$(addprefix $(STDLIB_DIR), $(STDLIB_FILES))\
 		$(addprefix $(STRING_DIR), $(STRING_FILES))\
-		$(addprefix $(OTHER_DIR), $(OTHER_FILES))
+		$(addprefix $(OTHER_DIR), $(OTHER_FILES))\
+		$(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
 
 SRC	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
 
 OBJ	= $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
 
-MPRINTF = ${MAKE} -C ./Printf
-
-all:libft printf
+all:libft
 
 libft: ${NAME}
 
@@ -110,16 +117,12 @@ ${NAME}:${OBJ}
 $(BIN_DIR)%.o:$(SRC_DIR)%.c
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-printf :
-	$(MPRINTF)
-
 clean:
 	$(RM) $(RMFLAGS) ${OBJ} 
-	${MPRINTF} clean
+
 
 fclean: clean 
 	$(RM) $(RMFLAGS) $(NAME) $(printf)
-	${MPRINTF} fclean
 
 re: fclean all
 
