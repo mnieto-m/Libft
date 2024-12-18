@@ -6,6 +6,8 @@ CFLAGS = -Wall -Werror -Wextra -g3
 AR = ar
 R = r
 INCLUDE = libft.h
+MKDIR = mkdir -p
+
 #DIRECTORIES#
 
 LIBFT_DIR = bin/
@@ -109,9 +111,10 @@ OBJ	= $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
 
 all:libft
 
-libft: ${NAME}
+libft:${NAME}
 
 ${NAME}:${OBJ}
+	$(MKDIR) $(LIBFT_DIR)
 	$(AR) $(R) ${NAME} ${OBJ}
 
 $(BIN_DIR)%.o:$(SRC_DIR)%.c
@@ -122,7 +125,7 @@ clean:
 
 
 fclean: clean 
-	$(RM) $(RMFLAGS) $(NAME) $(printf)
+	$(RM) $(RMFLAGS) $(NAME)
 
 re: fclean all
 
