@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:54:45 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/17 07:31:38 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:50:44 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static char	*set_line(char *str)
 {

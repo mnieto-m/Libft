@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:29:57 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/30 17:42:51 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:53:18 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "ibft.h"
 
 int	ft_isspace(int c)
 {

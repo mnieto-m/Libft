@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/17 07:21:58 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:53:35 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-
 
 # define FD_MAX 1024
 
@@ -98,10 +97,10 @@ char				*get_next_line(int fd);
 /* others*/
 int					check_token(char *s, char c);
 /* printf */
-int		ft_printf(char const *flag, ...);
-int		ft_putchar_pf(char c);
-size_t	ft_putnbr_pf(int n);
-size_t	ft_pointer_pf(void *flag);
-size_t	ft_putstr_pf(char *s);
+int					ft_printf(char const *flag, ...);
+int					ft_putchar_pf(char c);
+size_t				ft_putnbr_pf(int n);
+size_t				ft_pointer_pf(void *flag);
+size_t				ft_putstr_pf(char *s);
 
 #endif

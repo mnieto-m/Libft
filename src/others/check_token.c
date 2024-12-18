@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:54:33 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/11 16:56:31 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:54:12 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 int	check_token(char *s, char c)
 {

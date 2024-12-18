@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 19:00:24 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/25 21:47:05 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:55:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 char	*ft_substr(char const *s, size_t start, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:52:54 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/23 16:28:22 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:55:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static int	ft_len(int n)
 {

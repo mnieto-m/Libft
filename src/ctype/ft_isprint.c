@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:36:26 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/25 21:32:11 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:53:10 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

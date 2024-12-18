@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 22:31:08 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/17 07:31:51 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:54:42 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 size_t	ft_putnbr_pf(int n)
 {

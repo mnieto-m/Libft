@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:43:05 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/29 17:14:00 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:53:21 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:49:13 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/29 17:18:37 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:53:07 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 int	ft_isnum(int c)
 {

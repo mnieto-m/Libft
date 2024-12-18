@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 20:10:06 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/07/23 16:28:22 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:55:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static void	ft_dfree(char **tab, int i)
 {

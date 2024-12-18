@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 20:45:09 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/08/25 22:05:33 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:50:56 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

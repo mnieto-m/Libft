@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 16:05:49 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/16 17:17:12 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:55:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 int	ft_atoi_signal(char *str, int *flag)
 {
