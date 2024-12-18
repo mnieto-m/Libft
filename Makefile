@@ -5,13 +5,16 @@ RMFLAGS = -rf
 CFLAGS = -Wall -Werror -Wextra -g3
 AR = ar
 R = r
-INCLUDE = libft.h
+INCLUDE = -Iinclude/
 MKDIR = mkdir -p
 
 #DIRECTORIES#
 
+BIN_DIR = bin/obj/
 LIBFT_DIR = bin/
 SRC_DIR = src/
+
+#FILES
 
 GNL_DIR = gnl/
 CTYPE_DIR = ctype/
@@ -67,9 +70,7 @@ STRING_FILES = ft_strlen\
 				ft_strlcpy\
 				ft_strlcat\
 				ft_bzero\
-				ft_memchr\
 				ft_strchr\
-				ft_strncmp\
 				ft_strnstr\
 				ft_memchr\
 				ft_memcmp\
@@ -107,25 +108,25 @@ FILES = $(addprefix $(GNL_DIR), $(GNL_FILES))\
 
 SRC	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
 
-OBJ	= $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
+OBJ	= $(addprefix $(BIN_DIR), $(addsuffix .o, $(FILES)))
 
-all:libft
+all: libft
 
-libft:${NAME}
+libft: ${NAME}
 
-${NAME}:${OBJ}
+${NAME}: ${OBJ}
 	$(MKDIR) $(LIBFT_DIR)
 	$(AR) $(R) ${NAME} ${OBJ}
 
-$(BIN_DIR)%.o:$(SRC_DIR)%.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+$(BIN_DIR)%.o: $(SRC_DIR)%.c
+	$(MKDIR) $(dir $@)
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@ 
 
 clean:
-	$(RM) $(RMFLAGS) ${OBJ} 
-
+	$(RM) $(RMFLAGS) ${BIN_DIR} 
 
 fclean: clean 
-	$(RM) $(RMFLAGS) $(NAME)
+	$(RM) $(RMFLAGS) $(NAME) $(LIBFT_DIR)
 
 re: fclean all
 
