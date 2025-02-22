@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 21:37:19 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/02/22 13:13:17 by mnieto-m         ###   ########.fr       */
+/*   Created: 2025/02/22 12:51:51 by mnieto-m          #+#    #+#             */
+/*   Updated: 2025/02/22 13:13:34 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstcopy(t_list *lst)
+void	ft_swap(t_list *a, t_list *b)
 {
-	t_list	*new_list;
-
-	if (!lst)
-		return (NULL);
-	new_list = NULL;
-	while (lst)
-	{
-		ft_lstadd_back(&new_list, ft_lstnew(lst->content));
-		lst = lst->next;
-	}
-	return (new_list);
+	void *temp = a->content;
+	a->content = b->content;
+	b->content = temp;
 }

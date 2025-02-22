@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/02/20 22:16:21 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/02/22 13:08:11 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
 # endif
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -68,11 +74,8 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				**ft_split(char const *s, char c);
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+
+/*LIST*/
 void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
@@ -83,25 +86,30 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
-t_list *ft_lstcopy(t_list *lst);
+t_list				*ft_lstcopy(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 int					ft_lstisduplicate(t_list **a);
-int					ft_putunbr_base(size_t n, char *base);
-int					ft_pointer(void *flag);
-int					ft_putchar(char c);
-void				ft_mfree(int count, ...);
+void				ft_quicksort(t_list *lst, t_list *high, int (*cmp)(void *,
+							void *));
+void				ft_swap(t_list *a, t_list *b);
+void				ft_lstsort(t_list *lst, int (*cmp)(void *, void *));
 
 /* gnl */
 char				*get_next_line(int fd);
 
 /* others*/
 int					check_token(char *s, char c);
+void				ft_mfree(int count, ...);
 /* printf */
 int					ft_printf(char const *flag, ...);
 int					ft_putchar_pf(char c);
 size_t				ft_putnbr_pf(int n);
 size_t				ft_pointer_pf(void *flag);
 size_t				ft_putstr_pf(char *s);
+
+int					ft_putunbr_base(size_t n, char *base);
+int					ft_pointer(void *flag);
+int					ft_putchar(char c);
 
 #endif

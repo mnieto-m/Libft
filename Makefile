@@ -50,7 +50,10 @@ LIST_FILES = ft_lstnew\
 				ft_lstmap\
 				ft_lstsecond_last\
 				ft_lstisduplicate\
-				ft_lstcpy
+				ft_lstcpy\
+				ft_quicksort\
+				ft_lstsort\
+				ft_swap
 
 STDIO_FILES = ft_putunbr_base\
 				ft_pointer\
