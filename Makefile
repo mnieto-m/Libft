@@ -99,7 +99,8 @@ PRINTF_FILES = ft_printf\
 				ft_putstr_pf
 
 
-OTHER_FILES = check_token
+OTHER_FILES = check_token\
+				cmp_int
 
 FILES = $(addprefix $(GNL_DIR), $(GNL_FILES))\
 		$(addprefix $(CTYPE_DIR), $(CTYPE_FILES))\
