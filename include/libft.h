@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/02/22 13:23:32 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/06/03 00:14:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ char				*get_next_line(int fd);
 /* others*/
 int					check_token(char *s, char c);
 void				ft_mfree(int count, ...);
-int cmp_int(void *a, void *b);
+int					cmp_int(void *a, void *b);
 /* printf */
 int					ft_printf(char const *flag, ...);
 int					ft_putchar_pf(char c);

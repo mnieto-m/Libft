@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 12:51:51 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/02/22 13:13:34 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/06/03 00:14:33 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_swap(t_list *a, t_list *b)
 {
-	void *temp = a->content;
+	void	*temp;
+
+	temp = a->content;
 	a->content = b->content;
 	b->content = temp;
 }
