@@ -6,25 +6,25 @@
 /*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:54:33 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/07/25 20:38:09 by mario            ###   ########.fr       */
+/*   Updated: 2025/07/29 20:17:37 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int	check_token(char *s, char c)
+int check_token(char *s, char c)
 {
-	int	i;
-	int	count;
-
-	i = 0;
+	int i;
+	int count;
+	i = -1;
 	count = 0;
-	while (s[i] != '\0')
+	while (s[++i])
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0' || s[i] == '\n'))
+		if (s[i] == '\n')
+			continue;
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			count++;
-		i++;
+		// i++;
 	}
 	return (count);
 }
