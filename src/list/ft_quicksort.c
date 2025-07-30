@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 12:40:25 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/06/03 00:14:03 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/07/30 16:26:52 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,23 @@ t_list	*ft_partition(t_list *low, t_list *high, int (*cmp)(void *, void *))
 	return (i);
 }
 
-void	ft_quicksort(t_list *lst, t_list *high, int (*cmp)(void *, void *))
+void	ft_quicksort(t_list *low, t_list *high, int (*cmp)(void *, void *))
 {
 	t_list	*pivot;
+	t_list	*prev;
 
-	if ((lst != NULL) && (high != NULL) && (lst != high) && (lst != high->next))
+	if ((low != NULL) && (high != NULL) && (low != high) && (low != high->next))
 	{
-		pivot = ft_partition(lst, high, cmp);
-		ft_quicksort(lst, pivot->next, cmp);
+		pivot = ft_partition(low, high, cmp);
+		prev = NULL;
+		if (pivot != low)
+		{
+			prev = low;
+			while (prev && prev->next != pivot)
+				prev = prev->next;
+		}
+		if (prev != NULL)
+			ft_quicksort(low, prev, cmp);
 		ft_quicksort(pivot->next, high, cmp);
 	}
 }
