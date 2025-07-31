@@ -6,7 +6,7 @@
 /*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:54:33 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/07/29 20:17:37 by mario            ###   ########.fr       */
+/*   Updated: 2025/07/31 21:39:21 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,21 @@ int check_token(char *s, char c)
 {
 	int i;
 	int count;
-	i = -1;
+	i = 0;
 	count = 0;
-	while (s[++i])
+	while (s[i])
 	{
-		if (s[i] == '\n')
-			continue;
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		// saltar separadores
+		while (s[i] == c || s[i] == '\n')
+			i++;
+
+		// si hay una palabra, contarla
+		if (s[i] && s[i] != c && s[i] != '\n')
+		{
 			count++;
-		// i++;
+			while (s[i] && s[i] != c && s[i] != '\n')
+				i++;
+		}
 	}
 	return (count);
 }
