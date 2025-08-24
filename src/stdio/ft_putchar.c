@@ -6,13 +6,13 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 19:20:05 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/18 13:55:49 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/24 14:05:00 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar_pf(char c)
+int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }

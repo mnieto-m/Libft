@@ -55,13 +55,14 @@ LIST_FILES = ft_lstnew\
 				ft_lstsort\
 				ft_swap
 
-STDIO_FILES = ft_putunbr_base\
+STDIO_FILES = 
+				ft_putchar\
+				ft_putunbr_base\
 				ft_pointer\
 				ft_putchar_fd\
 				ft_putendl_fd\
 				ft_putstr_fd\
-				ft_putnbr_fd\
-				ft_putchar
+				ft_putnbr_fd
 
 STDLIB_FILES = ft_calloc\
 				ft_atoi\
