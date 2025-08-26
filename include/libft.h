@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/06/03 00:14:49 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/26 21:21:54 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,13 +104,14 @@ void				ft_mfree(int count, ...);
 int					cmp_int(void *a, void *b);
 /* printf */
 int					ft_printf(char const *flag, ...);
-int					ft_putchar_pf(char c);
+int					ft_putchar(char c);
 size_t				ft_putnbr_pf(int n);
 size_t				ft_pointer_pf(void *flag);
 size_t				ft_putstr_pf(char *s);
+void	ft_putchar_fd(char c, int fd);
 
 int					ft_putunbr_base(size_t n, char *base);
 int					ft_pointer(void *flag);
-int					ft_putchar(char c);
+int					ft_putchar_pf(char c);
 
 #endif
