@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:49:32 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/26 21:21:54 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:03:20 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int					ft_putchar(char c);
 size_t				ft_putnbr_pf(int n);
 size_t				ft_pointer_pf(void *flag);
 size_t				ft_putstr_pf(char *s);
-void	ft_putchar_fd(char c, int fd);
+void				ft_putchar_fd(char c, int fd);
 
 int					ft_putunbr_base(size_t n, char *base);
 int					ft_pointer(void *flag);
